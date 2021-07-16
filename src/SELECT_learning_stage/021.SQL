@@ -1,0 +1,4 @@
+SELECT maker, MAX(price)
+FROM Product
+         JOIN PC ON Product.model = PC.model
+GROUP BY maker
