@@ -23,7 +23,8 @@ CREATE TABLE Battles
 
 CREATE TABLE Outcomes
 (
-    ship   VARCHAR(50) PRIMARY KEY,
+    ship   VARCHAR(50),
     battle VARCHAR(50) REFERENCES Battles (name),
-    result VARCHAR(50) CHECK (result IN ('sunk', 'damaged', 'OK'))
+    result VARCHAR(50) CHECK (result IN ('sunk', 'damaged', 'OK')),
+    CONSTRAINT Outcomes_pk PRIMARY KEY (ship, battle)
 );
