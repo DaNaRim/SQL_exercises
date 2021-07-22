@@ -1,14 +1,14 @@
-CREATE TABLE Product
+CREATE TABLE product
 (
     maker VARCHAR,
     model INT PRIMARY KEY,
     type  VARCHAR CHECK (type IN ('PC', 'Laptop', 'Printer'))
 );
 
-CREATE TABLE PC
+CREATE TABLE pc
 (
     code  INT PRIMARY KEY,
-    model INT REFERENCES Product (model),
+    model INT REFERENCES product (model),
     speed INT,
     ram   INT,
     hd    INT,
@@ -16,10 +16,10 @@ CREATE TABLE PC
     price INT
 );
 
-CREATE TABLE Laptop
+CREATE TABLE laptop
 (
     code   INT PRIMARY KEY,
-    model  INT REFERENCES Product (model),
+    model  INT REFERENCES product (model),
     speed  INT,
     ram    INT,
     hd     INT,
@@ -27,10 +27,10 @@ CREATE TABLE Laptop
     screen INT
 );
 
-CREATE TABLE Printer
+CREATE TABLE printer
 (
     code  INT PRIMARY KEY,
-    model INT REFERENCES Product (model),
+    model INT REFERENCES product (model),
     color VARCHAR CHECK (color IN ('y', 'n')),
     type  VARCHAR CHECK (type IN ('Laser', 'Jet', 'Matrix')),
     price INT

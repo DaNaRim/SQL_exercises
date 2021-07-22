@@ -1,9 +1,9 @@
-SELECT maker
-FROM Product
-         JOIN PC ON Product.model = PC.model
-WHERE speed >= 750
+   SELECT pr.maker
+     FROM product AS pr
+          JOIN pc ON pr.model = pc.model
+    WHERE pc.speed >= 750
 INTERSECT
-SELECT maker
-FROM Product
-         JOIN Laptop ON Product.model = Laptop.model
-WHERE speed >= 750
+   SELECT pr.maker
+     FROM product     AS pr
+          JOIN laptop AS l ON pr.model = l.model
+    WHERE l.speed >= 750

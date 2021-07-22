@@ -1,4 +1,4 @@
 SELECT hd
-FROM PC
-GROUP BY hd
+  FROM pc
+ GROUP BY hd
 HAVING COUNT(hd) > 1

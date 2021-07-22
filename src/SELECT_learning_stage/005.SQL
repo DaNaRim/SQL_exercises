@@ -1,4 +1,4 @@
 SELECT model, speed, hd
-FROM PC
-WHERE cd IN ('12x', '24x')
-  AND price < 600
+  FROM pc
+ WHERE cd IN ('12x', '24x')
+   AND price < 600

@@ -1,2 +1,2 @@
 SELECT AVG(speed)
-FROM PC
+  FROM pc

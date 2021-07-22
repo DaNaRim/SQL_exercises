@@ -1,6 +1,5 @@
-SELECT DISTINCT A.model, B.model, A.speed, A.ram
-FROM PC AS A,
-     PC AS B
-WHERE A.model > B.model
-  AND A.speed = B.speed
-  AND A.ram = B.ram
+SELECT DISTINCT a.model, b.model, a.speed, a.ram
+  FROM pc AS a, pc AS b
+ WHERE a.model > b.model
+   AND a.speed = b.speed
+   AND a.ram = b.ram

@@ -1,10 +1,13 @@
 SELECT *
-FROM (SELECT model, price
-      FROM PC
-      UNION
-      SELECT model, price
-      FROM Laptop
-      UNION
-      SELECT model, price
-      FROM Printer) AS a
-WHERE a.model IN (SELECT model FROM Product WHERE maker = 'B')
+  FROM (SELECT model, price
+          FROM pc
+         UNION
+        SELECT model, price
+          FROM laptop
+         UNION
+        SELECT model, price
+          FROM printer
+       ) AS a
+ WHERE a.model IN (SELECT model
+                     FROM product
+                    WHERE maker = 'B')

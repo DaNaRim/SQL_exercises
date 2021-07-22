@@ -1,3 +1,3 @@
 SELECT DISTINCT class, country
-FROM Classes
-WHERE bore >= 16
+  FROM classes
+ WHERE bore >= 16

@@ -1,3 +1,5 @@
 SELECT DISTINCT maker
-FROM Product
-WHERE model IN (SELECT model FROM PC WHERE speed >= 450)
+  FROM product
+ WHERE model IN (SELECT model
+                   FROM pc
+                  WHERE speed >= 450)

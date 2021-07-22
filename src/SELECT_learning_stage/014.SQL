@@ -1,4 +1,4 @@
-SELECT Ships.class, Ships.name, Classes.country
-FROM Ships
-         JOIN Classes ON Classes.class = Ships.class
-    AND Classes.numGuns >= 10
+SELECT s.class, s.name, c.country
+  FROM ships        AS s
+       JOIN classes AS c ON c.class = s.class
+                         AND c.numguns >= 10

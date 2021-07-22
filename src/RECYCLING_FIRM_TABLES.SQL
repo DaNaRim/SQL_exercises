@@ -1,4 +1,4 @@
-CREATE TABLE Income_o
+CREATE TABLE income_o
 (
     point INT,
     date  DATE,
@@ -6,7 +6,7 @@ CREATE TABLE Income_o
     CONSTRAINT income_pk PRIMARY KEY (point, date)
 );
 
-CREATE TABLE Outcome_o
+CREATE TABLE outcome_o
 (
     point INT,
     date  DATE,
@@ -14,7 +14,7 @@ CREATE TABLE Outcome_o
     CONSTRAINT outcome_pk PRIMARY KEY (point, date)
 );
 
-CREATE TABLE Income
+CREATE TABLE income
 (
     code  INT PRIMARY KEY,
     point INT,
@@ -23,10 +23,10 @@ CREATE TABLE Income
 );
 
 
-CREATE TABLE Outcome
+CREATE TABLE outcome
 (
     code  INT PRIMARY KEY,
     point INT,
     date  DATE,
     out   DECIMAL
-)
+);

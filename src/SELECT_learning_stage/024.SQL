@@ -1,15 +1,15 @@
-WITH tab AS (
-    SELECT model, price
-    FROM PC
-    WHERE price = (SELECT MAX(price) FROM PC)
-    UNION
-    SELECT model, price
-    FROM Laptop
-    WHERE price = (SELECT MAX(price) FROM Laptop)
-    UNION
-    SELECT model, price
-    FROM Printer
-    WHERE price = (SELECT MAX(price) FROM Printer))
+  WITH q AS (SELECT model, price
+                 FROM pc
+                WHERE price = (SELECT MAX(price) FROM pc)
+                UNION
+               SELECT model, price
+                 FROM laptop
+                WHERE price = (SELECT MAX(price) FROM laptop)
+                UNION
+               SELECT model, price
+                 FROM printer
+                WHERE price = (SELECT MAX(price) FROM printer)
+              )
 SELECT model
-FROM tab
-WHERE price = (SELECT MAX(price) FROM tab)
+  FROM q
+ WHERE price = (SELECT MAX(price) FROM q)

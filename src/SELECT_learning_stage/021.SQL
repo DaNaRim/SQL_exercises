@@ -1,4 +1,4 @@
-SELECT maker, MAX(price)
-FROM Product
-         JOIN PC ON Product.model = PC.model
-GROUP BY maker
+SELECT pr.maker, MAX(pc.price)
+  FROM product AS pr
+       JOIN pc ON pr.model = pc.model
+ GROUP BY pr.maker

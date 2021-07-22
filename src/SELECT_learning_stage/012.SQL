@@ -1,3 +1,3 @@
 SELECT AVG(speed)
-FROM Laptop
-WHERE price > 1000
+  FROM laptop
+ WHERE price > 1000

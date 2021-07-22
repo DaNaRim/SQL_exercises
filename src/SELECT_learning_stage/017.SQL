@@ -1,3 +1,3 @@
 SELECT DISTINCT 'Laptop', model, speed
-FROM Laptop
-WHERE speed < ALL (SELECT speed FROM PC)
+  FROM laptop
+ WHERE speed < ALL (SELECT speed FROM pc)
